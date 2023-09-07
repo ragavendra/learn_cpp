@@ -20,6 +20,9 @@ private:
 	LinkList *_linkList = NULL;
 
 public:
+	LinkList_()
+	{}
+
 	void InsertEleTail(int num)
 	{
 		// if first ele
@@ -81,13 +84,21 @@ public:
 int main()
 {
 
-	LinkList_ linkList;
+	LinkList_ *linkList = new LinkList_();
 
-	linkList.InsertEleTail(10);
-	linkList.InsertEleTail(20);
-	linkList.InsertEleTail(60);
+	linkList->InsertEleTail(10);
+	linkList->InsertEleTail(20);
+	linkList->InsertEleTail(60);
 	// linkList.DisplayList();
-	linkList.InsertEleHead(25);
-	linkList.InsertEleHead(65);
-	linkList.DisplayList();
+	linkList->InsertEleHead(25);
+	linkList->InsertEleHead(65);
+	linkList->DisplayList();
+
+	LinkList_ linkList_;
+	cout << endl << linkList << endl;
+	cout << &linkList_ << endl;
+
+	linkList = new LinkList_();
+	// linkList = NULL;
+	cout << linkList << endl;
 }
