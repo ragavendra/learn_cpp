@@ -2,6 +2,7 @@
 #include <cmath>
 #include <vector>
 #include <fstream>
+#include "AudioFile.h"
 
 // #include <string>
 
@@ -84,6 +85,11 @@ class Cichlid : public Fish
 
 int main()
 {
+	AudioFile<double> audioFile;
+	audioFile.load("test-audio.wav");
+
+	audioFile.printSummary();
+
 	std::cout << "Learn cpp ";
 
 	char s = 'F';

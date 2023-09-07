@@ -15,6 +15,17 @@ $ python3 install.py --clangd-completer
 Follow below to setup the `env`
 The companion repository for the [**Vim: Setting up a Build System and Code Completion for C and C++**](https://dane-bulat.medium.com/vim-setting-up-a-build-system-and-code-completion-for-c-and-c-eb263c0a19a1) guide.
 
+### CMake
+Below are common steps once `CMakeLists.txt` is created.
+
+```
+mkdir build
+cd build
+cmake ../Step_1
+cmake --build .
+./ExeName
+```
+
 ### Build steps
 a. `Ctrl + M` and `M` invokes `:Copen`
 b. `Ctrl + M` and `bd` builds the `Debug`
